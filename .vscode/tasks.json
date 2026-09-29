@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Typecheck (Dev)",
+            "type": "shell",
+            "command": "npx tsc --noEmit",
+            "group": "build",
+            "problemMatcher": ["$tsc"],
+            "detail": "Checks types using tsconfig.json without outputting files"
+        },
+        {
+            "label": "Typecheck (Prod)",
+            "type": "shell",
+            "command": "npx tsc -p tsconfig.prod.json --noEmit",
+            "group": "build",
+            "problemMatcher": ["$tsc"],
+            "detail": "Checks types using tsconfig.prod.json without outputting files"
+        },
+        {
+            "label": "Build (Production Dist)",
+            "type": "shell",
+            "command": "npm run build",
+            "group": "build",
+            "detail": "Runs unbuild to generate .mjs and .cjs files in dist/"
+        }
+    ]
+}

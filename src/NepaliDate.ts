@@ -21,16 +21,16 @@ import { validateTime } from './validators'
  * Represents a Nepali calendar date.
  */
 class NepaliDate {
-    private timestamp: Date
-    private year: number
-    private yearEn: number
-    private month: number
-    private monthEn: number
-    private day: number
-    private dayEn: number
-    private hour: number
-    private minute: number
-    private weekDay: number
+    private timestamp!: Date
+    private year!: number
+    private yearEn!: number
+    private month!: number
+    private monthEn!: number
+    private day!: number
+    private dayEn!: number
+    private hour!: number
+    private minute!: number
+    private weekDay!: number
 
     /**
      * Creates a NepaliDate instance for the current date and time.
