@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [1.0.1](https://github.com/aakashx58/nepali_date/compare/v1.0.0...v1.0.1) (2026-09-29)
+
+
+### Bug Fixes
+
+* bug report ([d619573](https://github.com/aakashx58/nepali_date/commit/d6195730d0b965c3f41bf7f9f2eef6ba2b147dbb))
+* precommit ([dbb95d8](https://github.com/aakashx58/nepali_date/commit/dbb95d8475395119b5a07a7de67b22aacdad5819))
+* precommit ([571a97b](https://github.com/aakashx58/nepali_date/commit/571a97bbcf0cc603e6d4ae76c86653be90f53d3d))
+
 ## [2.0.0](https://github.com/opensource-nepal/node-nepali-datetime/compare/v1.6.0...v2.0.0) (2026-04-11)
 
 
