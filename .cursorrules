@@ -1,0 +1,38 @@
+# nepali-datetime AI Guide
+
+This document provides context for any AI assistant (Cursor, GitHub Copilot, ChatGPT, Claude, etc.) working on or using the `nepali-datetime` library.
+
+## Project Overview
+`nepali-datetime` is a robust Node.js library written in TypeScript to handle Nepali dates (Bikram Sambat) and conversions between AD (Gregorian) and BS.
+
+## Tech Stack
+- Language: TypeScript
+- Testing: Jest
+- Build Tool: unbuild (outputs CJS, ESM, and Types)
+- Formatting: Prettier
+
+## Guidelines for Modifying This Repository
+1. **Source Code**: All library code lives in `src/`. Do not write functional code outside this directory.
+2. **Testing**: Write comprehensive tests for all new features in the `tests/` directory using Jest.
+3. **Building**: Rely on `unbuild` (via `npm run build`). Do not modify TypeScript compilation directly to emit production builds.
+4. **Code Style**: Run `npm run format` (Prettier) before finalizing code. Avoid modifying linting rules unless explicitly requested.
+
+## Guidelines for Generating Code Using This Library
+When asked to write code that uses `nepali-datetime`:
+
+1. **Imports**:
+   ```typescript
+   // For core date operations
+   import NepaliDate, { NepalTimezoneDate } from 'nepali-datetime';
+   
+   // For AD/BS date conversions
+   import dateConverter from 'nepali-datetime/dateConverter';
+   ```
+
+2. **Core Operations**:
+   - Use `dateConverter.adToBs('YYYY-MM-DD')` and `dateConverter.bsToAd('YYYY-MM-DD')` for string-based conversions. Do not try to manually calculate leap years.
+   - Use `new NepaliDate()` for object-based date math, similar to the native JS `Date` object.
+   - Use `NepalTimezoneDate` to accurately get the current Nepal time when running on servers in different timezones.
+
+3. **Formatting**:
+   - `NepaliDate` supports native formatting: `new NepaliDate().format('YYYY-MM-DD')`.
